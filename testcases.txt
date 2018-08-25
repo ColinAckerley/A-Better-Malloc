@@ -1,0 +1,7 @@
+mymalloc test cases
+
+	Case E:
+		This case will malloc a the max block size possible which is 4998 + 2 bytes of meta data = 5000 bytes total. The block is then freed and the process is repeated. The program runs this procedure 150 times to check if after a while the mallocs and frees are "clean" and we can continue to reuse space.
+		
+	Case F:
+		This case will first malloc 4 blocks of memory of 1000 blocks each. This leaves us with a total of (1000+2)*4 = 992 bytes left in memory. Next, the 4 blocks are each freed. The program then asks for a block of 2000 bytes then frees it. Lastly it then asks for a block of 4000 bytes then frees it. The purpose of this case is to test the merging of the free space and to show that the memory can be reused when merged.
